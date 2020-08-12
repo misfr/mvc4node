@@ -1,0 +1,24 @@
+{
+  "name": "mvc4node",
+  "version": "0.1.0",
+  "description": "Promise / async-await based MVC engine for NodeJS",
+  "homepage": "https://github.com/misfr/mvc4node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misfr/mvc4node.git"
+  },
+  "scripts": {
+    "build:dev": "rm -rf dist && mkdir dist && tsc -w",
+    "build": "rm -rf dist && tsc && cp package.json dist/ && cp README.md dist/"
+  },
+  "author": "Frederic BAYLE",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mime-types": "^2.1.0",
+    "@types/node": "^12.12.53",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "mime-types": "^2.1.27"
+  }
+}
