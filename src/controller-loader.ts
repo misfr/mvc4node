@@ -6,14 +6,14 @@ export class ControllerLoader {
   /**
    * Loaded controllers
    */
-  protected static _loadedControllers: {[key: string]: () => any} = {};
+  protected static _loadedControllers: {[key: string]: { new (...args: any[]): any; }} = {};
 
   /**
    * Register a controller into the ControllerLoader collection
    * @param controllerIdentifier  Identifier of the controller to register (ex : Name/Of/The/Controller)
    * @param controllerCstr        Controller class to instanciate
    */
-  public static register(controllerIdentifier: string, controllerCstr: () => any) {
+  public static register(controllerIdentifier: string, controllerCstr: { new (...args: any[]): any; }) {
     ControllerLoader._loadedControllers[controllerIdentifier] = controllerCstr;
   }
 
@@ -22,7 +22,7 @@ export class ControllerLoader {
    * @param     controllerIdentifier   Identifier of the controller (ex : Name/Of/The/Controller)
    * @returns                          Controller class to instanciate
    */
-  public static getControllerCstr(controllerIdentifier: string): any {
+  public static getControllerCstr(controllerIdentifier: string): { new (...args: any[]): any; } {
     if(!(controllerIdentifier in ControllerLoader._loadedControllers)) {
       throw new Error("Unable to find the controller module " + controllerIdentifier + ".");
     }
