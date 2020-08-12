@@ -1,0 +1,14 @@
+{
+  "name": "mvc4node-doc",
+  "version": "1.0.0",
+  "description": "mvc4node documentation",
+  "dependencies": {
+    "docsify-cli": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "docsify serve"
+  },
+  "author": "Frederic BAYLE",
+  "license": "MIT"
+}
