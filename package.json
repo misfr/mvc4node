@@ -1,7 +1,7 @@
 {
   "name": "mvc4node",
   "version": "0.1.0",
-  "description": "Promise / async-await based MVC engine for NodeJS",
+  "description": "async-await based MVC engine for NodeJS",
   "homepage": "https://github.com/misfr/mvc4node",
   "repository": {
     "type": "git",
